@@ -202,3 +202,10 @@ functions:
     environment:
       content_type: "application/json"
 
+  system-export-cert:
+    lang: go
+    handler: ./system-export-cert
+    image: functions/system-export-cert:latest
+    environment:
+      ss_deployment: "ofc-sealedsecrets-sealed-secrets"
+      ss_namespace: "kube-system"
